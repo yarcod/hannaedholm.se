@@ -1,0 +1,51 @@
+---
+layout: gallery_album
+title: "FAMILJ"
+active: gallery
+gallery_path: "/familj"
+album-title: "FAMILJ"
+header-img: familjHeader.jpg
+images:
+ - image_path: /img/galleries/Sussie/DSC_1010.jpg
+   caption: Eriksson
+   copyright: © hannaedholm
+ - image_path: /img/galleries/Sussie/DSC_1193.jpg
+   caption: Eriksson
+   copyright: © hannaedholm
+ - image_path: /img/galleries/Sussie/DSC_1660.jpg
+   caption: Eriksson
+   copyright: © hannaedholm
+ - image_path: /img/galleries/Sussie/DSC_2301.jpg
+   caption: Eriksson
+   copyright: © hannaedholm
+ - image_path: /img/galleries/Sussie/DSC_2333.jpg
+   caption: Eriksson
+   copyright: © hannaedholm
+---
+
+<h2 class="album-title">{{page.album-title}}</h2>
+
+
+<!-- Gallery __-->
+<div class="gallery masonry-gallery">
+		
+  {% for image in page.images %}  		
+
+    <figure class="gallery-item">
+      <header class='gallery-icon'>
+
+      <a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+        <img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+      </header>	
+      <figcaption class='gallery-caption'>
+        <div class="entry-summary">
+          <h3>{{image.caption}}</h3>
+          <p>{{image.copyright}}</p>
+        </div>
+      </figcaption>
+    </figure>
+				
+  {% endfor %}
+
+</div>
